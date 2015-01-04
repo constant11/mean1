@@ -1,0 +1,39 @@
+<div class="container">
+	<div>
+		<h1>{{message}}</h1>
+		<div class='text-right'><button ng-click="lsnr_create_ev()" class="btn btn-primary">Create</button></div>
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th ng-repeat="headerLabel in headerLabels">
+					{{headerLabel.label}}
+				</th>
+			</tr>
+			
+		</thead>
+		<tbody>
+			<tr ng-repeat="contactDetails in contactsDetails">
+				<td>
+					{{contactDetails.completename}}
+				</td>
+				<td>
+					{{contactDetails.completeaddress}}
+				</td>
+				<td>
+					{{contactDetails.telno}}
+				</td>
+				<td>
+					{{contactDetails.cellno}}
+				</td>
+				<td>
+					{{contactDetails.birthday}}
+				</td>
+				<td>
+					<button ng-click="lsnr_edit_ev(contactDetails._id)" class="btn btn-primary">Edit</button>
+					<button ng-click="lsnr_delete_ls(contactDetails._id)" class="btn btn-danger">Delete</button>
+				</td>
+			</tr>
+		</tbody>
+		
+</div>

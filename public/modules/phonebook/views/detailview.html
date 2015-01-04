@@ -1,0 +1,77 @@
+<div class="container" ng-controller="PhoneBookCtrl">
+	<div>
+		<h1>{{message}}</h1>
+	</div>
+	<div class='form-horizontal'>
+		<div class='form-group text-center'>
+			<button class="btn btn-primary" ng-click="create()">Save</button>
+			<button class="btn btn-danger" ng-click="cancel()">Cancel</button>
+		</div>
+		<div class='form-group'>
+			<label class="col-sm-2 control-label">Name</label>
+			
+				<div class='col-sm-3'>
+					<input class="form-control" ng-model="contactDetails.givenname" placeholder="Given Name" />
+				</div>
+				<div class='col-sm-3'>
+					<input class="form-control" ng-model="contactDetails.middlename" placeholder="Middle Name" />
+				</div>
+				<div class='col-sm-3'>
+					<input class="form-control" ng-model="contactDetails.familyname" placeholder="Family Name" />
+				</div>
+			
+		</div>
+		<div class='form-group'>
+			<label class="col-sm-2 control-label">Telephone No</label>
+			<div class='col-sm-9' ><input class="form-control" ng-model="contactDetails.telno" /></div>
+		</div>
+		<div class='form-group'>
+			<label class="col-sm-2 control-label">Cellphone No</label>
+			<div class='col-sm-9' ><input class="form-control" ng-model="contactDetails.cellno" /></div>
+		</div>
+		<div class='form-group'>
+			<label class="col-sm-2 control-label">Birthday</label>
+			<div class="col-sm-3">
+			  <select class="form-control" ng-model="contactDetails.birthyear" >
+				<option value="" disabled selected>Year</option>
+				<option ng-repeat="year in years" value={{year.val}}>{{year.val}}</option>
+			  </select>
+			</div>
+			<div class="col-sm-3">
+			  <select class="form-control" ng-model="contactDetails.birthmonth" >
+				<option value="" disabled selected>Month</option>
+				<option ng-repeat="month in months" value={{month.val}}>{{month.dis}}</option>
+			  </select>
+			</div>
+			<div class="col-sm-3">
+			  <select class="form-control" ng-model="contactDetails.birthday" >
+				<option value="" disabled selected>Day</option>
+				<option ng-repeat="day in days" value={{day.val}}>{{day.val}}</option>
+			  </select>
+			</div>
+		</div>
+		<div class='form-group'>
+			<label class="col-sm-2 control-label">Address</label>
+			<div >
+				<div class='col-sm-9'>
+					<input class="form-control" ng-model="contactDetails.preaddress" placeholder="House No., Street, Barangay" />
+				</div>
+				<div class='col-sm-3 col-sm-offset-2'>
+					<input class="form-control" ng-model="contactDetails.city" placeholder="City" />
+				</div>
+				<div class='col-sm-3'>
+					<input class="form-control" ng-model="contactDetails.province" placeholder="Province" />
+				</div>
+				<div class='col-sm-3'>
+					<input class="form-control" ng-model="contactDetails.country" placeholder="Country" />
+				</div>
+			</div>
+		
+		</div>		
+		<div class='form-group text-center'>
+			<button class="btn btn-primary" ng-click="create()">Save</button>
+			<button class="btn btn-danger" ng-click="cancel()">Cancel</button>
+		</div>		
+	</div>
+		
+</div>
